@@ -3,19 +3,11 @@ import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 
-import { RouterModule, Routes } from '@angular/router';
-
 import 'hammerjs';
 
 import { AppComponent } from './app.component';
+import { AppRoutingModule } from './app.routing.module';
 import { InboxComponent } from './components/inbox/inbox.component';
-
-const appRoutes: Routes = [
-  { path: 'inbox', component: InboxComponent },
-  { path: '', redirectTo: 'inbox', pathMatch: 'full' },
-  { path: '**', redirectTo: 'inbox' }
-  // { path: 'heroes', component: HeroListComponent },
-];
 
 @NgModule({
   declarations: [
@@ -23,10 +15,10 @@ const appRoutes: Routes = [
     InboxComponent
   ],
   imports: [
-    RouterModule.forRoot(appRoutes),
     BrowserModule,
     FormsModule,
-    HttpModule
+    HttpModule,
+    AppRoutingModule
   ],
   providers: [],
   bootstrap: [AppComponent]
