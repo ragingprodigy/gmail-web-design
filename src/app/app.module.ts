@@ -8,15 +8,17 @@ import { RouterModule, Routes } from '@angular/router';
 import 'hammerjs';
 
 import { AppComponent } from './app.component';
+import { InboxComponent } from './modules/inbox/inbox.component';
 
 const appRoutes: Routes = [
-  // { path: 'crisis-center', component: CrisisListComponent },
+  { path: 'inbox', component: InboxComponent },
   // { path: 'heroes', component: HeroListComponent },
 ];
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    InboxComponent
   ],
   imports: [
     RouterModule.forRoot(appRoutes),
