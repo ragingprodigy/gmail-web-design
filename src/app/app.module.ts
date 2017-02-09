@@ -8,10 +8,12 @@ import { RouterModule, Routes } from '@angular/router';
 import 'hammerjs';
 
 import { AppComponent } from './app.component';
-import { InboxComponent } from './modules/inbox/inbox.component';
+import { InboxComponent } from './components/inbox/inbox.component';
 
 const appRoutes: Routes = [
   { path: 'inbox', component: InboxComponent },
+  { path: '', redirectTo: 'inbox', pathMatch: 'full' },
+  { path: '**', redirectTo: 'inbox' }
   // { path: 'heroes', component: HeroListComponent },
 ];
 
