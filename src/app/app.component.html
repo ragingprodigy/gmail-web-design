@@ -1,7 +1,17 @@
-<h1>Angular Router - {{title}}</h1>
+<md-toolbar color="primary" class=md-elevation-z6>
+  <span>Angular Router - {{title}}</span>
+  <span class="spacer"></span>
+  <md-icon class="icon">favorite</md-icon>
+  <md-icon class="icon">delete</md-icon>
+</md-toolbar>
+
 <nav>
   <a routerLink="/inbox" routerLinkActive="active">Inbox</a>
   <a routerLink="/starred" routerLinkActive="active">Starred</a>
   <a routerLink="/sent" routerLinkActive="active">Sent</a>
+  <a routerLink="/drafts" routerLinkActive="active">Drafts</a>
+  <a [routerLink]="['label', 'family']" routerLinkActive="active">Family</a>
+  <a [routerLink]="['/label', 'work']" routerLinkActive="active">Work</a>
+  <a>More</a>
 </nav>
 <router-outlet></router-outlet>
