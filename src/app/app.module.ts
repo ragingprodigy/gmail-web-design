@@ -17,8 +17,8 @@ import { InboxModule } from './modules/inbox/inbox.module';
   imports: [
     BrowserModule,
     HttpModule,
-    AppRoutingModule,
-    InboxModule
+    InboxModule,
+    AppRoutingModule
   ],
   providers: [],
   bootstrap: [AppComponent]
