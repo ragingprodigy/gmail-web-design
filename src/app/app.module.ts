@@ -9,6 +9,7 @@ import { AppRoutingModule } from './app.routing.module';
 
 // Custom Modules
 import { InboxModule } from './modules/inbox/inbox.module';
+import { StarredMailModule } from './modules/starred-mail/starred-mail.module';
 
 @NgModule({
   declarations: [
@@ -18,6 +19,7 @@ import { InboxModule } from './modules/inbox/inbox.module';
     BrowserModule,
     HttpModule,
     InboxModule,
+    StarredMailModule,
     AppRoutingModule
   ],
   providers: [],
