@@ -1,24 +1,24 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 
 import 'hammerjs';
 
 import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app.routing.module';
-import { InboxComponent } from './components/inbox/inbox.component';
+
+// Custom Modules
+import { InboxModule } from './modules/inbox/inbox.module';
 
 @NgModule({
   declarations: [
-    AppComponent,
-    InboxComponent
+    AppComponent
   ],
   imports: [
     BrowserModule,
-    FormsModule,
     HttpModule,
-    AppRoutingModule
+    AppRoutingModule,
+    InboxModule
   ],
   providers: [],
   bootstrap: [AppComponent]
