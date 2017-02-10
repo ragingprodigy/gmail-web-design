@@ -1,10 +1,10 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 
-import { StarredMailComponent } from './starred-mail.component';
+import { SentMailComponent } from './sent-mail.component';
 
 const routes: Routes = [
-  { path: 'starred', component: StarredMailComponent }
+  { path: 'sent', component: SentMailComponent }
 ];
 
 @NgModule({
@@ -12,4 +12,4 @@ const routes: Routes = [
   exports: [RouterModule],
   providers: []
 })
-export class StarredMailRoutingModule { }
+export class SentMailRoutingModule { }
